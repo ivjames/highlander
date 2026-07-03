@@ -20,3 +20,20 @@
   var lv=[62,88,40,74,52,96,34,80,58,70,46,90,66,50,84,42,76,60,94,38,72,54];
   lv.forEach(function(h){var b=document.createElement('i');b.style.height=h+'%';ch.appendChild(b);});
 })();
+
+(function(){
+  // Current-conditions widget. Keyless Open-Meteo (no API key, CORS, no tracking). Hides on any failure.
+  var el=document.getElementById('wx'); if(!el) return;
+  var WMO={0:'Clear',1:'Mainly clear',2:'Partly cloudy',3:'Overcast',45:'Fog',48:'Fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',56:'Freezing drizzle',57:'Freezing drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',66:'Freezing rain',67:'Freezing rain',71:'Light snow',73:'Snow',75:'Heavy snow',77:'Snow grains',80:'Rain showers',81:'Rain showers',82:'Heavy showers',85:'Snow showers',86:'Snow showers',95:'Thunderstorm',96:'Thunderstorm',99:'Thunderstorm'};
+  var url='https://api.open-meteo.com/v1/forecast?latitude=34.0975&longitude=-117.6484&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=America%2FLos_Angeles';
+  fetch(url).then(function(r){return r.ok?r.json():Promise.reject();}).then(function(d){
+    var c=(d&&d.current)||{}, day=(d&&d.daily)||{};
+    if(typeof c.temperature_2m!=='number') return;
+    document.getElementById('wx-temp').textContent=Math.round(c.temperature_2m);
+    document.getElementById('wx-cond').textContent=WMO[c.weather_code]||'';
+    if(day.temperature_2m_max&&day.temperature_2m_min){
+      document.getElementById('wx-hilo').textContent='H '+Math.round(day.temperature_2m_max[0])+'\u00b0  \u00b7  L '+Math.round(day.temperature_2m_min[0])+'\u00b0';
+    }
+    el.hidden=false;
+  }).catch(function(){/* stays hidden */});
+})();

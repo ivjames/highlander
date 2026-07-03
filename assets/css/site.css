@@ -204,3 +204,12 @@
   .note{border-left:2px solid var(--amber);padding:6px 0 6px 18px;color:var(--grey);font-size:14px;line-height:1.65;margin:26px 0}
   @media(max-width:900px){ .grid2{grid-template-columns:1fr;gap:40px} .gallery{grid-template-columns:repeat(2,1fr)} }
   @media(max-width:640px){ .page-hero{padding:60px 0 44px} .page-body{padding:52px 0} .gallery{grid-template-columns:1fr} }
+
+  /* current-conditions widget (Visit) — our own UI over keyless Open-Meteo; hidden until data loads */
+  .wx{border:1px solid var(--line);background:var(--bg2);padding:20px 22px;margin-top:30px;max-width:340px}
+  .wx-loc{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--greyd);margin-bottom:12px}
+  .wx-main{display:flex;align-items:baseline;gap:14px}
+  .wx-temp{font-family:'Space Grotesk',sans-serif;font-size:44px;font-weight:600;letter-spacing:-.02em;line-height:1}
+  .wx-temp::after{content:"\00b0";color:var(--amber)}
+  .wx-cond{font-size:12px;letter-spacing:.04em;color:var(--grey)}
+  .wx-hilo{font-size:11px;letter-spacing:.06em;color:var(--greyd);margin-top:10px}

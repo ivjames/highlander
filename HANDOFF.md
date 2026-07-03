@@ -8,11 +8,18 @@ third-party requests.** Serve the folder statically (directory-style URLs like
 
 ### Pages
 `/` home · `/tickets/` · `/ticket-policies/` · `/seating-chart/` · `/about/` ·
-`/edu/` · `/rentals/` · `/visit/` · `/visit/accessibility/` · `/gallery/` ·
-`/contact/`. All page content is pulled faithfully from the live site (thin/empty
-live pages — gallery, seating — are rebuilt from the venue's own photos + chart).
-Shared chrome lives in `assets/css/site.css`, `assets/js/site.js`, and
-`assets/ha-logo.svg` (referenced via `<use>` so the logo is defined once).
+`/about/staff/` · `/edu/` · `/rentals/` · `/visit/` · `/visit/accessibility/` ·
+`/gallery/` · `/lost/` · `/contact/`. All page content is pulled faithfully from
+the live site (thin/empty live pages — gallery, seating — are rebuilt from the
+venue's own photos + chart). Shared chrome lives in `assets/css/site.css`,
+`assets/js/site.js`, and `assets/ha-logo.svg` (referenced via `<use>` so the logo
+is defined once). `/about/staff/` and `/lost/` are the pages the live site hides
+in dropdown menus.
+
+The `/visit/` page carries a small **weather widget** (our own UI, not an embed)
+that fetches current Upland conditions from the keyless, CORS-friendly Open-Meteo
+API client-side — replacing the live site's external Weather-Underground link. It
+stays hidden if the fetch fails, so it never shows a broken state.
 
 ```
 highlander/
