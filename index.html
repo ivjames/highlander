@@ -30,6 +30,7 @@
     --amber:#DC764B;   /* sampled from venue stage wash, hue 18° */
   }
   html{scroll-behavior:smooth}
+  #main,#programs,#house,#rental,#visit,#contact{scroll-margin-top:92px}
   body{background:var(--bg);color:var(--fg);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;padding:10px}
   a{color:inherit;text-decoration:none}
   .skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--amber);color:var(--bg);padding:10px 16px;font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
@@ -297,14 +298,14 @@ fill="#FFFFFF" stroke="none"><path d="M453 1028 c-5 -7 -29 -62 -52 -123 -61 -159
 -27 73 -43 77 -36 9 -55 7 -71 -10z"/></g></g></symbol></svg>
 
 <header><div class="wrap hd">
-  <a class="logo" href="https://www.highlanderauditorium.com" aria-label="Highlander Auditorium home"><svg class="logo-svg" width="173" height="46" viewBox="0 0 173 46" role="img" aria-label="Highlander Auditorium"><use href="#ha-logo"/></svg></a>
+  <a class="logo" href="#main" aria-label="Highlander Auditorium home"><svg class="logo-svg" width="173" height="46" viewBox="0 0 173 46" role="img" aria-label="Highlander Auditorium"><use href="#ha-logo"/></svg></a>
   <nav>
-    <a href="https://www.highlanderauditorium.com/tickets/">Tickets</a>
-    <a href="https://www.highlanderauditorium.com/about/philosophy/">About</a>
-    <a href="https://www.highlanderauditorium.com/contact/">Rentals</a>
-    <a href="https://www.highlanderauditorium.com/visit/directions/">Visit</a>
-    <a href="https://www.highlanderauditorium.com/contact/">Contact</a>
-    <a class="buy" href="https://www.highlanderauditorium.com/tickets/">Buy Tickets</a>
+    <a href="#programs">Tickets</a>
+    <a href="#house">About</a>
+    <a href="#rental">Rentals</a>
+    <a href="#visit">Visit</a>
+    <a href="#contact">Contact</a>
+    <a class="buy" href="#programs">Buy Tickets</a>
   </nav>
   <button class="burger" aria-label="Menu">MENU</button>
 </div></header>
@@ -315,8 +316,8 @@ fill="#FFFFFF" stroke="none"><path d="M453 1028 c-5 -7 -29 -62 -52 -123 -61 -159
     <h1>One stage for shows, ceremonies, and student work.</h1>
     <p>A 1,073-seat proscenium theatre in Upland, 30 minutes east of downtown Los Angeles — full lighting, sound, and rigging, operated by Upland Unified School District.</p>
     <div class="hero-cta">
-      <a class="p" href="https://www.highlanderauditorium.com/tickets/">View Shows</a>
-      <a class="s" href="https://www.highlanderauditorium.com/visit/directions/">Plan Visit</a>
+      <a class="p" href="#programs">View Shows</a>
+      <a class="s" href="#visit">Plan Visit</a>
     </div>
   </div>
   <div class="hero-right">
@@ -333,25 +334,25 @@ fill="#FFFFFF" stroke="none"><path d="M453 1028 c-5 -7 -29 -62 -52 -123 -61 -159
   <i>Facility rental available</i>
 </div>
 
-<section class="sec"><div class="wrap sec-inner">
+<section class="sec" id="programs"><div class="wrap sec-inner">
   <div class="sec-head">
     <div><div class="qnum">Q01 · PROGRAMS</div><h2 class="sec-title">What takes the stage</h2></div>
-    <a class="sec-link" href="https://www.highlanderauditorium.com/tickets/">All events <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="sec-link" href="#programs">All events <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
   <div class="progs">
-    <a class="prog" href="https://www.highlanderauditorium.com/tickets/">
+    <a class="prog" href="#programs">
       <div class="swatch">01 — TICKETS</div>
       <h3>See a Show</h3>
       <p>Concerts, recitals, and district performances. Tickets are sold online through Ludus when events go on sale.</p>
       <span class="go">Tickets <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
-    <a class="prog" href="https://www.highlanderauditorium.com/edu/">
+    <a class="prog" href="#programs">
       <div class="swatch">02 — EDUCATION</div>
       <h3>Educational Events</h3>
       <p>The auditorium hosts Upland USD school and educational events throughout the year, booked through the district.</p>
       <span class="go">EDU booking <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
-    <a class="prog" href="https://www.highlanderauditorium.com/contact/">
+    <a class="prog" href="#rental">
       <div class="swatch">03 — RENTAL</div>
       <h3>Rent the Venue</h3>
       <p>Graduations, ceremonies, recitals, and conferences — the stage is available to rent with full technical support.</p>
@@ -361,29 +362,29 @@ fill="#FFFFFF" stroke="none"><path d="M453 1028 c-5 -7 -29 -62 -52 -123 -61 -159
 </div></section>
 
 <section class="sec"><div class="split">
-  <div class="a">
+  <div class="a" id="house">
     <div class="qnum">Q02 · THE HOUSE</div>
     <h2>Built for production, from recital to headliner.</h2>
     <p>1,073 seats under a proscenium arch, with ETC lighting, a Yamaha console, and a 27-foot HD screen — a full-production house 30 minutes east of downtown LA.</p>
-    <a class="btn" href="https://www.highlanderauditorium.com/seating-chart/">Seating chart <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn" href="#visit">Seating chart <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
-  <div class="b">
+  <div class="b" id="rental">
     <div class="qnum">Q03 · RENTAL</div>
     <h2>Take the stage for your own event.</h2>
     <p>Graduations, ceremonies, conferences, weddings, and performances — the auditorium is available to rent with full technical support and staffing.</p>
-    <a class="btn" href="https://www.highlanderauditorium.com/contact/">Rental info <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn" href="#contact">Rental info <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </div></section>
 
-<section class="sec"><div class="visit">
+<section class="sec" id="visit"><div class="visit">
   <div class="visit-info">
     <div class="qnum">Q04 · VISIT</div>
     <h2 class="sec-title" style="font-size:32px">Getting here</h2>
     <div class="addr">850 North San Antonio Ave.<br>Upland, CA 91786</div>
-    <a class="vrow" href="https://www.highlanderauditorium.com/visit/directions/"><span class="n">01</span> Directions &amp; parking <span class="arr">→</span></a>
-    <a class="vrow" href="https://www.highlanderauditorium.com/visit/accessibility/"><span class="n">02</span> Accessibility <span class="arr">→</span></a>
-    <a class="vrow" href="https://www.highlanderauditorium.com/seating-chart/"><span class="n">03</span> Seating chart <span class="arr">→</span></a>
-    <a class="vrow" href="https://www.highlanderauditorium.com/ticket-policies/"><span class="n">04</span> Ticket policies <span class="arr">→</span></a>
+    <a class="vrow" href="#visit"><span class="n">01</span> Directions &amp; parking <span class="arr">→</span></a>
+    <a class="vrow" href="#visit"><span class="n">02</span> Accessibility <span class="arr">→</span></a>
+    <a class="vrow" href="#visit"><span class="n">03</span> Seating chart <span class="arr">→</span></a>
+    <a class="vrow" href="#visit"><span class="n">04</span> Ticket policies <span class="arr">→</span></a>
   </div>
   <div class="visit-map">
     <iframe src="https://maps.google.com/maps?q=Highlander%20Auditorium%2C%20850%20N%20San%20Antonio%20Ave.%20Upland%2C%20CA%2091786&t=m&z=15&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Highlander Auditorium, 850 N San Antonio Ave, Upland CA"></iframe>
@@ -391,14 +392,14 @@ fill="#FFFFFF" stroke="none"><path d="M453 1028 c-5 -7 -29 -62 -52 -123 -61 -159
   </div>
 </div></section>
 
-<footer>
+<footer id="contact">
   <div class="foot-cta"><div class="wrap fcta-in">
     <div class="fcta-lead">
       <div class="qnum">Q05 · PLAN YOUR VISIT</div>
       <h2>See you at the house.</h2>
     </div>
     <div class="fcta-side">
-      <a class="btn" href="https://www.highlanderauditorium.com/tickets/">Buy Tickets <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn" href="#programs">Buy Tickets <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <div class="fcta-meta mono">
         <div>850 N San Antonio Ave<br>Upland, CA 91786</div>
         <div><a href="tel:+19099859462">(909) 985-9462</a><br><a href="mailto:info@highlanderauditorium.com">info@highlanderauditorium.com</a></div>
@@ -410,17 +411,17 @@ fill="#FFFFFF" stroke="none"><path d="M453 1028 c-5 -7 -29 -62 -52 -123 -61 -159
     <div class="fb"><svg class="logo-svg" width="173" height="46" viewBox="0 0 173 46" role="img" aria-label="Highlander Auditorium"><use href="#ha-logo"/></svg><p>A 1,073-seat proscenium theatre in Upland, operated by Upland Unified School District.<br><a href="tel:+19099859462">(909) 985-9462</a> · <a href="mailto:info@highlanderauditorium.com">info@highlanderauditorium.com</a></p>
       <a class="uusd" href="https://www.upland.k12.ca.us/" target="_blank" rel="noopener"><span class="uusd-lbl">Operated by</span><img src="assets/img/UUSD_Logo_Horizontal-150px.png" width="150" height="45" alt="Upland Unified School District" loading="lazy"></a></div>
     <div class="fc"><h4>Events</h4>
-      <a href="https://www.highlanderauditorium.com/tickets/">All Shows</a>
-      <a href="https://www.highlanderauditorium.com/edu/">Education</a>
-      <a href="https://www.highlanderauditorium.com/gallery/">Gallery</a></div>
+      <a href="#programs">All Shows</a>
+      <a href="#programs">Education</a>
+      <a href="#house">Gallery</a></div>
     <div class="fc"><h4>Venue</h4>
-      <a href="https://www.highlanderauditorium.com/seating-chart/">Seating Chart</a>
-      <a href="https://www.highlanderauditorium.com/contact/">Facility Rental</a>
-      <a href="https://www.highlanderauditorium.com/ticket-policies/">Ticket Policies</a></div>
+      <a href="#visit">Seating Chart</a>
+      <a href="#rental">Facility Rental</a>
+      <a href="#visit">Ticket Policies</a></div>
     <div class="fc"><h4>Info</h4>
-      <a href="https://www.highlanderauditorium.com/about/philosophy/">About</a>
-      <a href="https://www.highlanderauditorium.com/visit/accessibility/">Accessibility</a>
-      <a href="https://www.highlanderauditorium.com/contact/">Contact</a></div>
+      <a href="#house">About</a>
+      <a href="#visit">Accessibility</a>
+      <a href="#contact">Contact</a></div>
   </div>
   <div class="fbot">
     <div class="c">© 2026 HIGHLANDER AUDITORIUM · UPLAND USD</div>
