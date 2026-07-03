@@ -10,7 +10,7 @@
     --amber:#DC764B;   /* sampled from venue stage wash, hue 18° */
   }
   html{scroll-behavior:smooth}
-  #main,#programs,#house,#rental,#visit,#contact{scroll-margin-top:92px}
+  #main,#programs,#house,#rental,#visit,#contact,#wx{scroll-margin-top:92px}
   body{background:var(--bg);color:var(--fg);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;padding:10px}
   a{color:inherit;text-decoration:none}
   .skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--amber);color:var(--bg);padding:10px 16px;font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
@@ -213,3 +213,21 @@
   .wx-temp::after{content:"\00b0";color:var(--amber)}
   .wx-cond{font-size:12px;letter-spacing:.04em;color:var(--grey)}
   .wx-hilo{font-size:11px;letter-spacing:.06em;color:var(--greyd);margin-top:10px}
+
+  /* ===== header dropdown menus ===== */
+  .nav-group{position:relative;height:72px;display:flex;align-items:center}
+  .nav-top{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);padding:10px 13px;background:none;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:color .15s}
+  .nav-top:hover,.nav-top[aria-expanded="true"]{color:var(--fg)}
+  .nav-top .chev{transition:transform .15s}
+  .nav-top[aria-expanded="true"] .chev{transform:rotate(180deg)}
+  .nav-menu{display:none;position:absolute;top:100%;left:0;z-index:60;min-width:214px;list-style:none;background:rgba(10,10,10,.97);backdrop-filter:blur(12px);border:1px solid var(--line);border-top:0;padding:6px}
+  .nav-group:hover>.nav-menu,.nav-group:focus-within>.nav-menu,.nav-top[aria-expanded="true"]+.nav-menu{display:block}
+  .nav-menu a{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);padding:11px 13px;white-space:nowrap;transition:color .15s,background .15s}
+  .nav-menu a:hover{color:var(--fg);background:var(--bg2)}
+  @media(max-width:640px){
+    nav.open .nav-group{height:auto;flex-direction:column;align-items:stretch}
+    nav.open .nav-top{width:100%;justify-content:space-between;padding:15px 20px;border-top:1px solid var(--line)}
+    nav.open .nav-menu{position:static;display:none;min-width:0;border:0;padding:0;background:none;backdrop-filter:none}
+    nav.open .nav-top[aria-expanded="true"]+.nav-menu{display:block}
+    nav.open .nav-menu a{padding:13px 20px 13px 36px;border-top:1px solid var(--line);color:var(--greyd)}
+  }

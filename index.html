@@ -27,9 +27,31 @@
   <a class="logo" href="/" aria-label="Highlander Auditorium home"><svg class="logo-svg" width="173" height="46" viewBox="0 0 173 46" role="img" aria-label="Highlander Auditorium"><use href="/assets/ha-logo.svg#ha-logo"/></svg></a>
   <nav>
     <a href="/tickets/">Tickets</a>
-    <a href="/about/">About</a>
-    <a href="/rentals/">Rentals</a>
-    <a href="/visit/">Visit</a>
+    <div class="nav-group">
+      <button class="nav-top" aria-expanded="false" aria-controls="menu-about">About Us <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+      <ul class="nav-menu" id="menu-about">
+        <li><a href="/about/">Our Philosophy</a></li>
+        <li><a href="/about/staff/">Our Staff</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <button class="nav-top" aria-expanded="false" aria-controls="menu-info">Information <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+      <ul class="nav-menu" id="menu-info">
+        <li><a href="/seating-chart/">Seating Chart</a></li>
+        <li><a href="/lost/">Lost &amp; Found</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><a href="/edu/">Edu Events</a></li>
+        <li><a href="/ticket-policies/">Ticket Policies</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <button class="nav-top" aria-expanded="false" aria-controls="menu-visit">Plan Your Visit <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+      <ul class="nav-menu" id="menu-visit">
+        <li><a href="/visit/">Directions &amp; Parking</a></li>
+        <li><a href="/visit/accessibility/">Accessibility</a></li>
+        <li><a href="/visit/#wx">Current Weather</a></li>
+      </ul>
+    </div>
     <a href="/contact/">Contact</a>
     <a class="buy" href="/tickets/">Buy Tickets</a>
   </nav>

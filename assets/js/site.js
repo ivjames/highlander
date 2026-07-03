@@ -37,3 +37,26 @@
     el.hidden=false;
   }).catch(function(){/* stays hidden */});
 })();
+
+(function(){
+  // Header dropdown menus (About Us / Information / Plan Your Visit).
+  var groups=[].slice.call(document.querySelectorAll('.nav-group'));
+  if(!groups.length) return;
+  function closeAll(except){
+    groups.forEach(function(g){
+      var b=g.querySelector('.nav-top');
+      if(b&&b!==except) b.setAttribute('aria-expanded','false');
+    });
+  }
+  groups.forEach(function(g){
+    var btn=g.querySelector('.nav-top'); if(!btn) return;
+    btn.addEventListener('click',function(){
+      var open=btn.getAttribute('aria-expanded')==='true';
+      closeAll(btn);
+      btn.setAttribute('aria-expanded', open?'false':'true');
+    });
+    g.addEventListener('focusout',function(e){ if(!g.contains(e.relatedTarget)) btn.setAttribute('aria-expanded','false'); });
+  });
+  document.addEventListener('click',function(e){ if(!e.target.closest('.nav-group')) closeAll(null); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeAll(null); var a=document.activeElement; if(a&&a.closest&&a.closest('.nav-group')) a.blur(); } });
+})();
