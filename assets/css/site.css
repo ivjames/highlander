@@ -185,6 +185,7 @@
   .prose li{color:var(--grey);font-size:16px;line-height:1.6;padding:13px 0 13px 28px;border-top:1px solid var(--line);position:relative}
   .prose li:last-child{border-bottom:1px solid var(--line)}
   .prose li::before{content:"";position:absolute;left:2px;top:23px;width:9px;height:1px;background:var(--amber)}
+  .prose .pquote{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:20px;color:var(--fg);letter-spacing:-.01em;margin:0 0 24px}
   .aside{border:1px solid var(--line);background:var(--bg2);padding:30px}
   .aside h3{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:6px}
   .aside .row{display:flex;flex-direction:column;gap:3px;padding:16px 0;border-top:1px solid var(--line);font-size:14px}
