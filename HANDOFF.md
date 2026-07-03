@@ -1,8 +1,18 @@
 # Highlander Auditorium — redesign handoff
 
-Single-file static page (`index.html`) + self-hosted assets. **No build step, no
-framework, and — except the Google Maps iframe — no third-party requests.** Open
-`index.html` in a browser, or serve the folder statically.
+Static multi-page site — `index.html` plus a page per section, sharing one
+stylesheet, one script, and one logo symbol. **No build step, no framework, and
+— except the Google Maps iframe and the `/edu/` Google Form/Drive links — no
+third-party requests.** Serve the folder statically (directory-style URLs like
+`/tickets/` need a static server, e.g. the included nginx config — see `deploy/`).
+
+### Pages
+`/` home · `/tickets/` · `/ticket-policies/` · `/seating-chart/` · `/about/` ·
+`/edu/` · `/rentals/` · `/visit/` · `/visit/accessibility/` · `/gallery/` ·
+`/contact/`. All page content is pulled faithfully from the live site (thin/empty
+live pages — gallery, seating — are rebuilt from the venue's own photos + chart).
+Shared chrome lives in `assets/css/site.css`, `assets/js/site.js`, and
+`assets/ha-logo.svg` (referenced via `<use>` so the logo is defined once).
 
 ```
 highlander/
